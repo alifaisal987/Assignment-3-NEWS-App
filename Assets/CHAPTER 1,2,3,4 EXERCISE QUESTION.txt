@@ -1,0 +1,789 @@
+======================== 1 =========================
+
+
+
+1.1 What are the three main purposes of an operating system?
+
+1.2 We have stressed the need for an operating system to make efficient use
+of the computing hardware. When is it appropriate for the operating
+system to forsake this principle and to “waste” resources? Why is such
+a system not really wasteful?
+
+1.3 What is the main difficulty that a programmer must overcome in writing
+an operating system for a real-time environment?
+
+1.4 Keeping in mind the various definitions of operating system, consider
+whether the operating system should include applications such as web
+browsers and mail programs. Argue both that it should and that it should
+not, and support your answers.
+
+1.5 How does the distinction between kernel mode and user mode function
+as a rudimentary form of protection (security) system?
+
+1.6 Which of the following instructions should be privileged?
+a. Set value of timer.
+b. Read the clock.
+c. Clear memory.
+d. Issue a trap instruction.
+e. Turn off interrupts.
+f. Modify entries in device-status table.
+g. Switch from user to kernel mode.
+h. Access I/O device.
+
+1.7 Some early computers protected the operating system by placing it in
+a memory partition that could not be modified by either the user job
+or the operating system itself. Describe two difficulties that you think
+could arise with such a scheme.
+
+1.8 Some CPUs provide for more than two modes of operation. What are
+two possible uses of these multiple modes?
+
+1.9 Timers could be used to compute the current time. Provide a short
+description of how this could be accomplished.
+
+1.10 Give two reasons why caches are useful. What problems do they solve?
+What problems do they cause? If a cache can be made as large as the
+device for which it is caching (for instance, a cache as large as a disk),
+why not make it that large and eliminate the device?
+
+1.11 Distinguish between the client–server and peer-to-peer models of
+distributed systems 
+
+1.12 In a multiprogramming and time-sharing environment, several users
+share the system simultaneously. This situation can result in various
+security problems.
+a. What are two such problems?
+b. Can we ensure the same degree of security in a time-shared
+machine as in a dedicated machine? Explain your answer.
+
+1.13 The issue of resource utilization shows up in different forms in different
+types of operating systems. List what resources must be managed
+carefully in the following settings:
+a. Mainframe or minicomputer systems
+b. Workstations connected to servers
+c. Mobile computers   
+
+1.14 Under what circumstances would a user be better off using a timesharing system than a PC or a single-user workstation?
+
+1.15 Describe the differences between symmetric and asymmetric multiprocessing. What are three advantages and one disadvantage of multiprocessor systems?
+
+1.16 How do clustered systems differ from multiprocessor systems? What is
+required for two machines belonging to a cluster to cooperate to provide
+a highly available service?
+
+1.17 Consider a computing cluster consisting of two nodes running a
+database. Describe two ways in which the cluster software can manage
+access to the data on the disk. Discuss the benefits and disadvantages of
+each.
+
+1.18 How are network computers different from traditional personal computers? Describe some usage scenarios in which it is advantageous to
+use network computers.
+
+1.19 What is the purpose of interrupts? How does an interrupt differ from a
+trap? Can traps be generated intentionally by a user program? If so, for
+what purpose?
+
+1.20 Direct memory access is used for high-speed I/O devices in order to
+avoid increasing the CPU’s execution load.
+a. How does the CPU interface with the device to coordinate the
+transfer?
+b. How does the CPU know when the memory operations are complete?
+c. The CPU is allowed to execute other programs while the DMA
+controller is transferring data. Does this process interfere with
+the execution of the user programs? If so, describe what forms
+of interference are caused.
+
+1.21 Some computer systems do not provide a privileged mode of operation
+in hardware. Is it possible to construct a secure operating system for
+these computer systems? Give arguments both that it is and that it is not
+possible.
+
+1.22 Many SMP systems have different levels of caches; one level is local to
+each processing core, and another level is shared among all processing
+cores. Why are caching systems designed this way?
+
+1.23 Consider an SMP system similar to the one shown in Figure 1.6. Illustrate
+with an example how data residing in memory could in fact have a
+different value in each of the local caches.
+
+1.24 Discuss, with examples, how the problem of maintaining coherence of
+cached data manifests itself in the following processing environments:
+a. Single-processor systems
+b. Multiprocessor systems
+c. Distributed systems
+
+1.25 Describe a mechanism for enforcing memory protection in order to
+prevent a program from modifying the memory associated with other
+programs.
+
+1.26 Which network configuration—LAN or WAN—would best suit the
+following environments?
+a. A campus student union
+b. Several campus locations across a statewide university system
+c. A neighborhood
+
+1.27 Describe some of the challenges of designing operating systems for
+mobile devices compared with designing operating systems for traditional PCs.
+
+1.28 What are some advantages of peer-to-peer systems over client-server
+systems?
+
+1.29 Describe some distributed applications that would be appropriate for a
+peer-to-peer system.
+
+1.30 Identify several advantages and several disadvantages of open-source
+operating systems. Include the types of people who would find each
+aspect to be an advantage or a disadvantage.
+
+
+======================== 2 =========================
+
+2.1 What is the purpose of system calls?
+
+2.2 What are the five major activities of an operating system with regard to
+process management?
+
+2.3 What are the three major activities of an operating system with regard
+to memory management?
+
+2.4 What are the three major activities of an operating system with regard
+to secondary-storage management?
+
+2.5 What is the purpose of the command interpreter? Why is it usually
+separate from the kernel?
+
+2.6 What system calls have to be executed by a command interpreter or shell
+in order to start a new process?
+
+2.7 What is the purpose of system programs?
+
+2.8 What is the main advantage of the layered approach to system design?
+What are the disadvantages of the layered approach?
+
+2.9 List five services provided by an operating system, and explain how each
+creates convenience for users. In which cases would it be impossible for
+user-level programs to provide these services? Explain your answer.
+
+2.10 Why do some systems store the operating system in firmware, while
+others store it on disk?
+
+2.11 How could a system be designed to allow a choice of operating systems
+from which to boot? What would the bootstrap program need to do?
+
+2.12 The services and functions provided by an operating system can be
+divided into two main categories. Briefly describe the two categories,
+and discuss how they differ.
+
+2.13 Describe three general methods for passing parameters to the operating
+system.
+
+2.14 Describe how you could obtain a statistical profile of the amount of time
+spent by a program executing different sections of its code. Discuss the
+importance of obtaining such a statistical profile.
+
+2.15 What are the five major activities of an operating system with regard to
+file management?
+
+2.16 What are the advantages and disadvantages of using the same systemcall interface for manipulating both files and devices?
+
+2.17 Would it be possible for the user to develop a new command interpreter
+using the system-call interface provided by the operating system?
+
+2.18 What are the two models of interprocess communication? What are the
+strengths and weaknesses of the two approaches?
+
+2.19 Why is the separation of mechanism and policy desirable?
+
+2.20 It is sometimes difficult to achieve a layered approach if two components
+of the operating system are dependent on each other. Identify a scenario
+in which it is unclear how to layer two system components that require
+tight coupling of their functionalities.
+
+2.21 What is the main advantage of the microkernel approach to system
+design? How do user programs and system services interact in a
+microkernel architecture? What are the disadvantages of using the
+microkernel approach?
+
+2.22 What are the advantages of using loadable kernel modules?
+
+2.23 How are iOS and Android similar? How are they different?
+
+2.24 Explain why Java programs running on Android systems do not use the
+standard Java API and virtual machine.
+
+2.25 The experimental Synthesis operating system has an assembler incorporated in the kernel. To optimize system-call performance, the kernel
+assembles routines within kernel space to minimize the path that the
+system call must take through the kernel. This approach is the antithesis
+of the layered approach, in which the path through the kernel is extended
+to make building the operating system easier. Discuss the pros and cons
+of the Synthesis approach to kernel design and system-performance
+optimization.
+
+2.26 In Section 2.3, we described a program that copies the contents of one file
+to a destination file. This program works by first prompting the user for
+the name of the source and destination files. Write this program using
+either the Windows or POSIX API. Be sure to include all necessary error
+checking, including ensuring that the source file exists.
+Once you have correctly designed and tested the program, if you
+used a system that supports it, run the program using a utility that traces
+system calls. Linux systems provide the strace utility, and Solaris and
+Mac OS X systems use the dtrace command. As Windows systems do
+not provide such features, you will have to trace through the Windows
+version of this program using a debugger.
+
+
+======================== 3 =========================
+
+
+3.1 Using the program shown in Figure 3.30, explain what the output will
+be at LINE A.
+
+3.2 Including the initial parent process, how many processes are created by
+the program shown in Figure 3.31?
+#include <stdio.h>
+#include <unistd.h>
+int main()
+{
+/* fork a child process */
+fork();
+/* fork another child process */
+fork();
+/* and fork another */
+fork();
+return 0;
+}
+Figure 3.31 How many processes are created?
+
+3.3 Original versions of Apple’s mobile iOS operating system provided no
+means of concurrent processing. Discuss three major complications that
+concurrent processing adds to an operating system.
+
+3.4 The Sun UltraSPARC processor has multiple register sets. Describe what
+happens when a context switch occurs if the new context is already
+loaded into one of the register sets. What happens if the new context is
+in memory rather than in a register set and all the register sets are in
+use?
+
+3.5 When a process creates a new process using the fork() operation, which
+of the following states is shared between the parent process and the child
+process?
+a. Stack
+b. Heap
+c. Shared memory segments
+
+3.6 Consider the “exactly once”semantic with respect to the RPC mechanism.
+Does the algorithm for implementing this semantic execute correctly
+even if the ACK message sent back to the client is lost due to a network
+problem? Describe the sequence of messages, and discuss whether
+“exactly once” is still preserved.
+
+3.7 Assume that a distributed system is susceptible to server failure. What
+mechanisms would be required to guarantee the “exactly once” semantic
+for execution of RPCs?
+
+3.8 Describe the differences among short-term, medium-term, and longterm scheduling.
+#include <stdio.h>
+#include <unistd.h>
+int main()
+{
+int i;
+for (i = 0; i < 4; i++)
+fork();
+return 0;
+}
+Figure 3.32 How many processes are created?
+
+3.9 Describe the actions taken by a kernel to context-switch between
+processes.
+
+3.10 Construct a process tree similar to Figure 3.8. To obtain process information for the UNIX or Linux system, use the command ps -ael.
+#include <sys/types.h>
+#include <stdio.h>
+#include <unistd.h>
+int main()
+{
+pid t pid;
+/* fork a child process */
+pid = fork();
+if (pid < 0) { /* error occurred */
+fprintf(stderr, "Fork Failed");
+return 1;
+}
+else if (pid == 0) { /* child process */
+execlp("/bin/ls","ls",NULL);
+printf("LINE J");
+}
+else { /* parent process */
+/* parent will wait for the child to complete */
+wait(NULL);
+printf("Child Complete");
+}
+return 0;
+}
+Use the command man ps to get more information about the ps command. The task manager on Windows systems does not provide the
+parent process ID, but the process monitor tool, available from technet.microsoft.com, provides a process-tree tool.
+
+3.11 Explain the role of the init process on UNIX and Linux systems in regard
+to process termination.
+
+3.12 Including the initial parent process, how many processes are created by
+the program shown in Figure 3.32?
+
+3.13 Explain the circumstances under which which the line of code marked
+printf("LINE J") in Figure 3.33 will be reached.
+
+3.14 Using the program in Figure 3.34, identify the values of pid at lines A, B,
+C, and D. (Assume that the actual pids of the parent and child are 2600
+and 2603, respectively.)
+#include <sys/types.h>
+#include <stdio.h>
+#include <unistd.h>
+int main()
+{
+pid t pid, pid1;
+/* fork a child process */
+pid = fork();
+if (pid < 0) { /* error occurred */
+fprintf(stderr, "Fork Failed");
+return 1;
+}
+else if (pid == 0) { /* child process */
+pid1 = getpid();
+printf("child: pid = %d",pid); /* A */
+printf("child: pid1 = %d",pid1); /* B */
+}
+else { /* parent process */
+pid1 = getpid();
+printf("parent: pid = %d",pid); /* C */
+printf("parent: pid1 = %d",pid1); /* D */
+wait(NULL);
+}
+return 0;
+}
+Figure 3.34 What are the pid values?
+#include <sys/types.h>
+#include <stdio.h>
+#include <unistd.h>
+#define SIZE 5
+int nums[SIZE] = {0,1,2,3,4};
+int main()
+{
+int i;
+pid t pid;
+pid = fork();
+if (pid == 0) {
+for (i = 0; i < SIZE; i++) {
+nums[i] *= -i;
+printf("CHILD: %d ",nums[i]); /* LINE X */
+}
+}
+else if (pid > 0) {
+wait(NULL);
+for (i = 0; i < SIZE; i++)
+printf("PARENT: %d ",nums[i]); /* LINE Y */
+}
+return 0;
+}
+Figure 3.35 What output will be at Line X and Line Y?
+
+3.15 Give an example of a situation in which ordinary pipes are more suitable
+than named pipes and an example of a situation in which named pipes
+are more suitable than ordinary pipes.
+
+3.16 Consider the RPC mechanism. Describe the undesirable consequences
+that could arise from not enforcing either the “at most once” or “exactly
+once” semantic. Describe possible uses for a mechanism that has neither
+of these guarantees.
+
+3.17 Using the program shown in Figure 3.35, explain what the output will
+be at lines X and Y.
+
+3.18 What are the benefits and the disadvantages of each of the following?
+Consider both the system level and the programmer level.
+a. Synchronous and asynchronous communication
+b. Automatic and explicit buffering
+c. Send by copy and send by reference
+d. Fixed-sized and variable-sized messages
+
+3.19 Using either a UNIX or a Linux system, write a C program that forks
+a child process that ultimately becomes a zombie process. This zombie
+process must remain in the system for at least 10 seconds. Process states
+can be obtained from the command
+ps -l
+The process states are shown below the S column; processes with a state
+of Z are zombies. The process identifier (pid) of the child process is listed
+in the PID column, and that of the parent is listed in the PPID column.
+Perhaps the easiest way to determine that the child process is indeed
+a zombie is to run the program that you have written in the background
+(using the &) and then run the command ps -l to determine whether
+the child is a zombie process. Because you do not want too many zombie
+processes existing in the system, you will need to remove the one that
+you have created. The easiest way to do that is to terminate the parent
+process using the kill command. For example, if the process id of the
+parent is 4884, you would enter
+kill -9 4884
+
+3.20 An operating system’s pid manager is responsible for managing process
+identifiers. When a process is first created, it is assigned a unique pid
+by the pid manager. The pid is returned to the pid manager when the
+process completes execution, and the manager may later reassign this
+pid. Process identifiers are discussed more fully in Section 3.3.1. What
+is most important here is to recognize that process identifiers must be
+unique; no two active processes can have the same pid.
+Use the following constants to identify the range of possible pid values:
+#define MIN PID 300
+#define MAX PID 5000
+You may use any data structure of your choice to represent the availability of process identifiers. One strategy is to adopt what Linux has
+done and use a bitmap in which a value of 0 at position i indicates that
+a process id of value i is available and a value of 1 indicates that the
+process id is currently in use.
+Implement the following API for obtaining and releasing a pid:
+• int allocate map(void)—Creates and initializes a data structure
+for representing pids; returns—1 if unsuccessful, 1 if successful
+• int allocate pid(void)—Allocates and returns a pid; returns—
+1 if unable to allocate a pid (all pids are in use)
+• void release pid(int pid)—Releases a pid
+This programming problem will be modified later on in Chpaters 4 and
+5.
+
+3.21 The Collatz conjecture concerns what happens when we take any
+positive integer n and apply the following algorithm:
+n =
+ n/2, if n is even
+3 × n + 1, if n is odd
+The conjecture states that when this algorithm is continually applied,
+all positive integers will eventually reach 1. For example, if n = 35, the
+sequence is
+35, 106, 53, 160, 80, 40, 20, 10, 5, 16, 8, 4, 2, 1
+Write a C program using the fork() system call that generates this
+sequence in the child process. The starting number will be provided
+from the command line. For example, if 8 is passed as a parameter on
+the command line, the child process will output 8, 4, 2, 1. Because the
+parent and child processes have their own copies of the data, it will be
+necessary for the child to output the sequence. Have the parent invoke
+the wait() call to wait for the child process to complete before exiting
+the program. Perform necessary error checking to ensure that a positive
+integer is passed on the command line.
+
+3.22 In Exercise 3.21, the child process must output the sequence of numbers
+generated from the algorithm specified by the Collatz conjecture because
+the parent and child have their own copies of the data. Another
+approach to designing this program is to establish a shared-memory
+object between the parent and child processes. This technique allows the
+child to write the contents of the sequence to the shared-memory object.
+The parent can then output the sequence when the child completes.
+Because the memory is shared, any changes the child makes will be
+reflected in the parent process as well.
+This program will be structured using POSIX shared memory as
+described in Section 3.5.1. The parent process will progress through the
+following steps:
+a. Establish the shared-memory object (shm open(), ftruncate(),
+and mmap()).
+b. Create the child process and wait for it to terminate.
+c. Output the contents of shared memory.
+d. Remove the shared-memory object.
+One area of concern with cooperating processes involves synchronization issues. In this exercise, the parent and child processes must be
+coordinated so that the parent does not output the sequence until the
+child finishes execution. These two processes will be synchronized using
+the wait() system call: the parent process will invoke wait(), which
+will suspend it until the child process exits.
+
+3.23 Section 3.6.1 describes port numbers below 1024 as being well known—
+that is, they provide standard services. Port 17 is known as the quote-of
+the-day service. When a client connects to port 17 on a server, the server
+responds with a quote for that day.
+Modify the date server shown in Figure 3.21 so that it delivers a quote
+of the day rather than the current date. The quotes should be printable
+ASCII characters and should contain fewer than 512 characters, although
+multiple lines are allowed. Since port 17 is well known and therefore
+unavailable, have your server listen to port 6017. The date client shown
+in Figure 3.22 can be used to read the quotes returned by your server.
+
+3.24 A haiku is a three-line poem in which the first line contains five syllables,
+the second line contains seven syllables, and the third line contains five
+syllables. Write a haiku server that listens to port 5575. When a client
+connects to this port, the server responds with a haiku. The date client
+shown in Figure 3.22 can be used to read the quotes returned by your
+haiku server.
+
+3.25 An echo server echoes back whatever it receives from a client. For
+example, if a client sends the server the string Hello there!, the server
+will respond with Hello there!
+Write an echo server using the Java networking API described in
+Section 3.6.1. This server will wait for a client connection using the
+accept() method. When a client connection is received, the server will
+loop, performing the following steps:
+• Read data from the socket into a buffer.
+• Write the contents of the buffer back to the client.
+The server will break out of the loop only when it has determined that
+the client has closed the connection.
+The date server shown in Figure 3.21 uses the
+java.io.BufferedReader class. BufferedReader extends the
+java.io.Reader class, which is used for reading character streams.
+However, the echo server cannot guarantee that it will read
+characters from clients; it may receive binary data as well. The
+class java.io.InputStream deals with data at the byte level rather
+than the character level. Thus, your echo server must use an object
+that extends java.io.InputStream. The read() method in the
+java.io.InputStream class returns −1 when the client has closed its
+end of the socket connection.
+
+3.26 Design a program using ordinary pipes in which one process sends a
+string message to a second process, and the second process reverses
+the case of each character in the message and sends it back to the first
+process. For example, if the first process sends the message Hi There, the
+second process will return hI tHERE. This will require using two pipes,
+one for sending the original message from the first to the second process
+and the other for sending the modified message from the second to the
+first process. You can write this program using either UNIX or Windows
+pipes.
+
+3.27 Design a file-copying program named filecopy using ordinary pipes.
+This program will be passed two parameters: the name of the file to be
+copied and the name of the copied file. The program will then create
+an ordinary pipe and write the contents of the file to be copied to the
+pipe. The child process will read this file from the pipe and write it to
+the destination file. For example, if we invoke the program as follows:
+filecopy input.txt copy.txt
+the file input.txt will be written to the pipe. The child process will
+read the contents of this file and write it to the destination file copy.txt.
+You may write this program using either UNIX or Windows pipes.
+
+
+======================== 4 =========================
+
+
+4.1 Provide two programming examples in which multithreading provides
+better performance than a single-threaded solution.
+
+4.2 What are two differences between user-level threads and kernel-level
+threads? Under what circumstances is one type better than the other?
+
+4.3 Describe the actions taken by a kernel to context-switch between kernellevel threads.
+
+4.4 What resources are used when a thread is created? How do they differ
+from those used when a process is created?
+
+4.5 Assume that an operating system maps user-level threads to the kernel
+using the many-to-many model and that the mapping is done through
+LWPs. Furthermore, the system allows developers to create real-time
+threads for use in real-time systems. Is it necessary to bind a real-time
+thread to an LWP? Explain.
+
+4.6 Provide two programming examples in which multithreading does not
+provide better performance than a single-threaded solution.
+
+4.7 Under what circumstances does a multithreaded solution using multiple kernel threads provide better performance than a single-threaded
+solution on a single-processor system?
+
+4.8 Which of the following components of program state are shared across
+threads in a multithreaded process?
+a. Register values
+b. Heap memory
+c. Global variables
+d. Stack memory
+
+4.9 Can a multithreaded solution using multiple user-level threads achieve
+better performance on a multiprocessor system than on a singleprocessor system? Explain.
+
+4.10 In Chapter 3, we discussed Google’s Chrome browser and its practice
+of opening each new website in a separate process. Would the same
+benefits have been achieved if instead Chrome had been designed to
+open each new website in a separate thread? Explain.
+
+4.11 Is it possible to have concurrency but not parallelism? Explain.
+
+4.12 Using Amdahl’s Law, calculate the speedup gain of an application that
+has a 60 percent parallel component for (a) two processing cores and (b)
+four processing cores.
+
+4.13 Determine if the following problems exhibit task or data parallelism:
+• The multithreaded statistical program described in Exercise 4.21
+• The multithreaded Sudoku validator described in Project 1 in this
+chapter
+• The multithreaded sorting program described in Project 2 in this
+chapter
+• The multithreaded web server described in Section 4.1
+
+4.14 A system with two dual-core processors has four processors available
+for scheduling. A CPU-intensive application is running on this system.
+All input is performed at program start-up, when a single file must
+be opened. Similarly, all output is performed just before the program
+terminates, when the program results must be written to a single
+file. Between startup and termination, the program is entirely CPUbound. Your task is to improve the performance of this application
+by multithreading it. The application runs on a system that uses the
+one-to-one threading model (each user thread maps to a kernel thread).
+• How many threads will you create to perform the input and output?
+Explain.
+• How many threads will you create for the CPU-intensive portion of
+the application? Explain.
+
+4.15 Consider the following code segment:
+pid t pid;
+pid = fork();
+if (pid == 0) { /* child process */
+fork();
+thread create( . . .);
+}
+fork();
+a. How many unique processes are created?
+b. How many unique threads are created?
+
+4.16 As described in Section 4.7.2, Linux does not distinguish between
+processes and threads. Instead, Linux treats both in the same way,
+allowing a task to be more akin to a process or a thread depending on the
+set of flags passed to the clone() system call. However, other operating
+systems, such as Windows, treat processes and threads differently.
+Typically, such systems use a notation in which the data structure for
+a process contains pointers to the separate threads belonging to the
+process. Contrast these two approaches for modeling processes and
+threads within the kernel.
+
+4.17 The program shown in Figure 4.16 uses the Pthreads API. What would
+be the output from the program at LINE C and LINE P?
+
+4.18 Consider a multicore system and a multithreaded program written
+using the many-to-many threading model. Let the number of user-level
+threads in the program be greater than the number of processing cores
+in the system. Discuss the performance implications of the following
+scenarios.
+a. The number of kernel threads allocated to the program is less than
+the number of processing cores.
+b. The number of kernel threads allocated to the program is equal to
+the number of processing cores.
+c. The number of kernel threads allocated to the program is greater
+than the number of processing cores but less than the number of
+user-level threads.
+#include <pthread.h>
+#include <stdio.h>
+#include <types.h>
+int value = 0;
+void *runner(void *param); /* the thread */
+int main(int argc, char *argv[])
+{
+pid t pid;
+pthread t tid;
+pthread attr t attr;
+pid = fork();
+if (pid == 0) { /* child process */
+pthread attr init(&attr);
+pthread create(&tid,&attr,runner,NULL);
+pthread join(tid,NULL);
+printf("CHILD: value = %d",value); /* LINE C */
+}
+else if (pid > 0) { /* parent process */
+wait(NULL);
+printf("PARENT: value = %d",value); /* LINE P */
+}
+}
+void *runner(void *param) {
+value = 5;
+pthread exit(0);
+}
+Figure 4.16 C program for Exercise 4.17.
+
+4.19 Pthreads provides an API for managing thread cancellation. The
+pthread setcancelstate() function is used to set the cancellation
+state. Its prototype appears as follows:
+pthread setcancelstate(int state, int *oldstate)
+The two possible values for the state are PTHREAD CANCEL ENABLE and
+PTHREAD CANCEL DISABLE.
+Using the code segment shown in Figure 4.17, provide examples of
+two operations that would be suitable to perform between the calls to
+disable and enable thread cancellation.
+int oldstate;
+pthread setcancelstate(PTHREAD CANCEL DISABLE, &oldstate);
+/* What operations would be performed here? */
+pthread setcancelstate(PTHREAD CANCEL ENABLE, &oldstate);
+Figure 4.17 C program for Exercise 4.19.
+
+4.20 Modify programming problem Exercise 3.20 from Chapter 3, which asks
+you to design a pid manager. This modification will consist of writing
+a multithreaded program that tests your solution to Exercise 3.20. You
+will create a number of threads—for example, 100—and each thread will
+request a pid, sleep for a random period of time, and then release the pid.
+(Sleeping for a random period of time approximates the typical pid usage
+in which a pid is assigned to a new process, the process executes and
+then terminates, and the pid is released on the process’s termination.) On
+UNIX and Linux systems, sleeping is accomplished through the sleep()
+function, which is passed an integer value representing the number of
+seconds to sleep. This problem will be modified in Chapter 5.
+
+4.21 Write a multithreaded program that calculates various statistical values
+for a list of numbers. This program will be passed a series of numbers on
+the command line and will then create three separate worker threads.
+One thread will determine the average of the numbers, the second
+will determine the maximum value, and the third will determine the
+minimum value. For example, suppose your program is passed the
+integers
+90 81 78 95 79 72 85
+The program will report
+The average value is 82
+The minimum value is 72
+The maximum value is 95
+The variables representing the average, minimum, and maximum values
+will be stored globally. The worker threads will set these values, and the
+parent thread will output the values once the workers have exited. (We
+could obviously expand this program by creating additional threads
+that determine other statistical values, such as median and standard
+deviation.)
+
+4.22 An interesting way of calculating  is to use a technique known as Monte
+Carlo, which involves randomization. This technique works as follows:
+Suppose you have a circle inscribed within a square, as shown in Figure
+4.18. (Assume that the radius of this circle is 1.) First, generate a series of
+random points as simple (x, y) coordinates. These points must fall within
+the Cartesian coordinates that bound the square. Of the total number of
+random points that are generated, some will occur within the circle.
+Next, estimate  by performing the following calculation:
+ = 4× (number of points in circle) / (total number of points)
+Write a multithreaded version of this algorithm that creates a separate
+thread to generate a number of random points. The thread will count
+the number of points that occur within the circle and store that result
+in a global variable. When this thread has exited, the parent thread will
+calculate and output the estimated value of . It is worth experimenting
+with the number of random points generated. As a general rule, the
+greater the number of points, the closer the approximation to .
+In the source-code download for this text, we provide a sample program
+that provides a technique for generating random numbers, as well as
+determining if the random (x, y) point occurs within the circle.
+Readers interested in the details of the Monte Carlo method for estimating  should consult the bibliography at the end of this chapter. In
+Chapter 5, we modify this exercise using relevant material from that
+chapter.
+
+4.23 Repeat Exercise 4.22, but instead of using a separate thread to generate
+random points, use OpenMP to parallelize the generation of points. Be
+careful not to place the calculcation of  in the parallel region, since you
+want to calculcate  only once.
+
+4.24 Write a multithreaded program that outputs prime numbers. This
+program should work as follows: The user will run the program and
+will enter a number on the command line. The program will then create
+a separate thread that outputs all the prime numbers less than or equal
+to the number entered by the user.
+
+4.25 Modify the socket-based date server (Figure 3.21) in Chapter 3 so that
+the server services each client request in a separate thread.
+4.26 The Fibonacci sequence is the series of numbers 0, 1, 1, 2, 3, 5, 8, ....
+Formally, it can be expressed as:
+fib0 = 0
+fib1 = 1
+fibn = fibn−1 + fibn−2
+Write a multithreaded program that generates the Fibonacci sequence.
+This program should work as follows: On the command line, the user
+will enter the number of Fibonacci numbers that the program is to
+generate. The program will then create a separate thread that will
+generate the Fibonacci numbers, placing the sequence in data that can
+be shared by the threads (an array is probably the most convenient
+data structure). When the thread finishes execution, the parent thread
+will output the sequence generated by the child thread. Because the
+parent thread cannot begin outputting the Fibonacci sequence until the
+child thread finishes, the parent thread will have to wait for the child
+thread to finish. Use the techniques described in Section 4.4 to meet this
+requirement.
+
+4.27 Exercise 3.25 in Chapter 3 involves designing an echo server using the
+Java threading API. This server is single-threaded, meaning that the
+server cannot respond to concurrent echo clients until the current client
+exits. Modify the solution to Exercise 3.25 so that the echo server services
+each client in a separate request.
